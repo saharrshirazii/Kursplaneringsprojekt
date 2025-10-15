@@ -6,7 +6,8 @@
   --color-purple-light: #e7cfff;
   --color-black-dark: #2b2b2b;
 }
-html,body{
+html,
+body {
   background-color: wheat;
   height: 100vh;
   margin: 0;
@@ -23,16 +24,32 @@ main {
 
 /* Footer Styles */
 footer {
-background-color: var(--color-grey-light);
-padding: 20px;
-text-align: center;
-width: 100%;
-margin: 0;
-box-sizing: border-box;
+  background-color: var(--color-grey-light);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 .footer-images {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   margin-top: 10px;
-} 
+}
+.footer-images img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+@media (min-width: 600px) {
+  .footer-images img {
+    width: 64px;
+    height: 64px;
+  }
+  .footer-images {
+    gap: 1rem;
+  }
+}
