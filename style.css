@@ -6,3 +6,14 @@
   --color-purple-light: #E7CFFF;
   --color-black-dark: #2B2B2B;
 }
+
+
+
+/*sahar css*/
+.sahar-class {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
