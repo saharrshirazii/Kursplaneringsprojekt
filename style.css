@@ -26,29 +26,67 @@ a {
 #nav-cards {
   display: flex;
   overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-grey-dark) var(--color-grey-light);
+}
+
+#nav-cards h2 {
+  font-size: 1.5rem;
 }
 
 .nav-card {
   margin-right: 20px;
+  width: 250px;
 }
 
 .nav-card h3,
 .nav-card p,
 .nav-card a {
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 .nav-card img {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 25px;
 }
 
 .read-more {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .read-more:hover {
   text-decoration: underline;
+}
+
+/*Responsivitet*/
+
+@media (min-width: 768px) {
+  #nav-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: auto;
+    overflow-x: hidden;
+  }
+
+  #card-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .nav-card {
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #nav-cards {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1300px;
+    margin: auto;
+    justify-content: center;
+  }
 }
