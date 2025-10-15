@@ -6,3 +6,49 @@
   --color-purple-light: #E7CFFF;
   --color-black-dark: #2B2B2B;
 }
+
+/*Globalt*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-grey-light);
+  color: var(--color-black-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black-dark);
+}
+
+
+/*Navigation cards*/
+
+#nav-cards {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.nav-card {
+  margin-right: 20px;
+}
+
+.nav-card h3,
+.nav-card p,
+.nav-card a {
+  font-size: 12px;
+}
+
+.nav-card img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.read-more {
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
