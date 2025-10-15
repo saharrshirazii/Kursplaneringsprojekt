@@ -1,13 +1,26 @@
 @import url(variables.css);
 
+
+/* Grundlayout */
 body {
     background-color: var(--color-grey-light);
 }
 
+main {
+    max-width: 900px;
+    margin: auto; /* byt till clamp() senare -> och sätt min o max (margin just sides?)*/
+}
 
-li {
+section > h2 {
+    text-align: center;
+}
+
+/* Korten */
+ol > li {
     background-color: var(--color-grey-dark);
     border-radius: 10px;
+    padding: 0.6vw;
+    margin-top: 20px;
 }
 
 p {
