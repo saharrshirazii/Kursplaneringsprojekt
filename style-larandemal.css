@@ -1,0 +1,10 @@
+@import url(variables.css);
+
+p {
+    color: var(--color-black-dark);
+}
+
+li {
+    background-color: var(--color-grey-dark);
+    border-radius: 10px;
+}
