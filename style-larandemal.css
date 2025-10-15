@@ -1,10 +1,15 @@
 @import url(variables.css);
 
-p {
-    color: var(--color-black-dark);
+body {
+    background-color: var(--color-grey-light);
 }
+
 
 li {
     background-color: var(--color-grey-dark);
     border-radius: 10px;
+}
+
+p {
+    color: var(--color-black-dark);
 }
