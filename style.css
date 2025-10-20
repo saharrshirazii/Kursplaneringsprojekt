@@ -24,7 +24,7 @@ main {
   flex: 1;
 }
 
-/* Footer Styles */
+/* FOOTER START */
 footer {
   background-color: var(--color-grey-dark);
   padding: 20px;
@@ -123,6 +123,8 @@ footer {
     padding: 0 2px;
   }
 }
+
+/* FOOTER END */
 
 /* ----------- GLOBALT ----------- */
 
