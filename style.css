@@ -1,3 +1,5 @@
+/* ----------- FÄRGPALETT ----------- */
+
 :root {
   --color-grey-dark: #E6E6E6;
   --color-grey-light: #F4F4F4;
@@ -7,7 +9,7 @@
   --color-black-dark: #2B2B2B;
 }
 
-/*Globalt*/
+/* ----------- GLOBALT ----------- */
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -20,6 +22,7 @@ a {
   color: var(--color-black-dark);
 }
 
+/* ----------- STARTSIDA ----------- */
 
 /*Navigation cards*/
 
@@ -61,7 +64,63 @@ a {
   text-decoration: underline;
 }
 
-/*Responsivitet*/
+/* ----------- LÄRANDEMÅL ----------- */
+
+.title-learning {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box-learning {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 0 20px;
+  gap: 20px;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  background-color: var(--color-grey-dark);
+  border-radius: 25px;
+  width: 80vw;
+  min-height: 100px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.box-description {
+  font-size: 16px;
+}
+
+.number-circle {
+  background-color: var(--color-purple-dark);
+  height: 60px;
+  aspect-ratio: 1 / 1;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  font-size: 24px;
+  color: var(--color-grey-light);
+  margin: 0;
+}
+
+#learning-objectives {
+  display: flex; /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar*/
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ----------- KUNSKAPSKONTROLL ----------- */
+
+/* ----------- BEDÖMNING ----------- */
+
+/* ----------- PEDAGOGISKT STÖD ----------- */
+
+/* ----------- RESPONSIVITET ----------- */
 
 @media (min-width: 768px) {
   #nav-cards {
