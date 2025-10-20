@@ -55,6 +55,8 @@ footer {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
+
 @media (min-width: 600px) {
   .footer-images img {
     width: 64px;
