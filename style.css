@@ -55,34 +55,60 @@ footer {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-.nav-btn {
+/* Knapparna i footern */
+.footer-btn-container {
   display: flex;
-  justify-content: space-evenly;
-  padding: 0 20px;
-  gap: 10px;
-  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  box-sizing: border-box;
+  z-index: 100;
+}
+/* De tre knapparna */
+.footer-btn-left,
+.footer-btn-home,
+.footer-btn-right {
+  position: relative;
+  text-align: center;
+}
+/* Storlek på bilderna */
+.footer-left-btn,
+.footer-home-btn,
+.footer-right-btn {
+  width: 30px;
+  height: auto;
   cursor: pointer;
 }
-
-.back-btn {
-  width: 20px;
-  height: auto;
+/* label del */
+.footer-left-label,
+.footer-home-label,
+.footer-right-label {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #9a63d9;
+  color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
 }
-.home-btn {
-  width: 22px;
-  height: auto;
-}
-.forward-btn {
-  width: 20px;
-  height: auto;
-}
-.back-btn:hover,
-.home-btn:hover,
-.forward-btn:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.footer-btn-left:hover .footer-left-label,
+.footer-btn-home:hover .footer-home-label,
+.footer-btn-right:hover .footer-right-label,
+.footer-btn-left a:hover ~ .footer-left-label,
+.footer-btn-home a:hover ~ .footer-home-label,
+.footer-btn-right a:hover ~ .footer-right-label {
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -94,22 +120,4 @@ footer {
     gap: 1rem;
     padding: 0 2px;
   }
-  .nav-btn {
-    gap: clamp(10px, 3vw, 20px);
-    padding: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-    .nav-btn {
-    gap: clamp(15px, 3vw, 20px);
-    padding: 15px;
-    justify-content: space-evenly;
-  }
-  .back-btn,
-  .home-btn,
-  .forward-btn {
-    width: clamp(16px, 5vw, 22px);
-  }
 }
-  
-
