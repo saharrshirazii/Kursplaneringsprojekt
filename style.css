@@ -8,7 +8,7 @@
 }
 html,
 body {
-  background-color: wheat;
+  background-color: #e6e6e6;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ main {
 
 /* Footer Styles */
 footer {
-  background-color: var(--color-grey-light);
+  background-color: var(--color-grey-dark);
   padding: 20px;
   text-align: center;
   width: 100%;
@@ -55,7 +55,30 @@ footer {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 100px;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.home-btn {
+  width: 24px;
+  position: relative;
+}
+.forward-btn {
+  width: 22px;
+}
+.home-btn:hover,
+.forward-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  
+}
 
 @media (min-width: 600px) {
   .footer-images img {
