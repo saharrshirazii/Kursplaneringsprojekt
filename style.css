@@ -57,30 +57,35 @@ footer {
 }
 .nav-btn {
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  gap: 100px;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  gap: 10px;
   align-items: center;
   width: 100%;
-  margin: 0 auto;
   box-sizing: border-box;
   cursor: pointer;
 }
+
+.back-btn {
+  width: 20px;
+  height: auto;
+}
 .home-btn {
-  width: 24px;
-  position: relative;
+  width: 22px;
+  height: auto;
 }
 .forward-btn {
-  width: 22px;
+  width: 20px;
+  height: auto;
 }
+.back-btn:hover,
 .home-btn:hover,
 .forward-btn:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
-  
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .footer-images img {
     width: 64px;
     height: 64px;
@@ -89,4 +94,22 @@ footer {
     gap: 1rem;
     padding: 0 2px;
   }
+  .nav-btn {
+    gap: clamp(10px, 3vw, 20px);
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+    .nav-btn {
+    gap: clamp(15px, 3vw, 20px);
+    padding: 15px;
+    justify-content: space-evenly;
+  }
+  .back-btn,
+  .home-btn,
+  .forward-btn {
+    width: clamp(16px, 5vw, 22px);
+  }
 }
+  
+
