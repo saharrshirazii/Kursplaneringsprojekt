@@ -8,23 +8,36 @@
   --color-purple-light: #e7cfff;
   --color-black-dark: #2b2b2b;
 }
+
+/* ----------- GLOBALT ----------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-grey-light);
+  color: var(--color-black-dark);
+  min-height: 100vh;
+}
+
 html,
 body {
-  background-color: #e6e6e6;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+
 main {
   flex: 1;
 }
 
-/* Footer Styles */
+a {
+  text-decoration: none;
+  color: var(--color-black-dark);
+}
+
+/* ----------- FOOTER ----------- */
+
 footer {
   background-color: var(--color-grey-dark);
   padding: 20px;
@@ -33,6 +46,7 @@ footer {
   margin: 0;
   box-sizing: border-box;
 }
+
 .footer-images {
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +56,7 @@ footer {
   padding-bottom: 0 10px;
   cursor: pointer;
 }
+
 .footer-images img {
   width: 48px;
   height: 48px;
@@ -53,10 +68,12 @@ footer {
   object-fit: cover;
   display: block;
 }
+
 .footer-images img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
 /* Knapparna i footern */
 .footer-btn-container {
   display: flex;
@@ -70,6 +87,7 @@ footer {
   width: 100%;
   z-index: 100;
 }
+
 /* De tre knapparna */
 .footer-btn-left,
 .footer-btn-home,
@@ -77,6 +95,7 @@ footer {
   position: relative;
   text-align: center;
 }
+
 /* Storlek på bilderna */
 .footer-left-btn,
 .footer-home-btn,
@@ -85,6 +104,7 @@ footer {
   height: auto;
   cursor: pointer;
 }
+
 /* label del */
 .footer-left-label,
 .footer-home-label,
@@ -104,6 +124,7 @@ footer {
   transition: opacity 0.3s;
   z-index: 10;
 }
+
 .footer-btn-left:hover .footer-left-label,
 .footer-btn-home:hover .footer-home-label,
 .footer-btn-right:hover .footer-right-label,
@@ -124,23 +145,9 @@ footer {
   }
 }
 
-/* ----------- GLOBALT ----------- */
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-grey-light);
-  color: var(--color-black-dark);
-}
-
-a {
-  text-decoration: none;
-  color: var(--color-black-dark);
-}
-
 /* ----------- STARTSIDA ----------- */
 
 /*Navigation cards*/
-
 #nav-cards {
   display: flex;
   overflow-x: scroll;
