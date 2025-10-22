@@ -29,7 +29,7 @@ body {
 
 main {
   flex: 1;
-  margin: 6px 16px;
+  margin: 6px 16px 30px 16px;
 }
 
 a {
