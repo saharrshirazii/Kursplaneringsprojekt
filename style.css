@@ -29,6 +29,7 @@ body {
 
 main {
   flex: 1;
+  margin: 6px 16px;
 }
 
 a {
@@ -151,8 +152,16 @@ footer {
 #nav-cards {
   display: flex;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: var(--color-grey-dark) var(--color-grey-light);
+  gap: 20px;
+  padding: 0 8px 0 16px;
+  margin-bottom: 30px;
+}
+
+#card-title {
+  margin-left: 10px;
 }
 
 #nav-cards h2 {
@@ -160,7 +169,7 @@ footer {
 }
 
 .nav-card {
-  margin-right: 20px;
+  scroll-snap-align: start;
   width: 250px;
 }
 
@@ -281,6 +290,8 @@ footer {
     max-width: 600px;
     margin: auto;
     overflow-x: hidden;
+    padding: 0;
+    gap: 0;
   }
 
   #card-title {
