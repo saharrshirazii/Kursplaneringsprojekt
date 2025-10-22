@@ -309,7 +309,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1200px;
-  justify-self: center;
+  align-self: center;
   justify-content: center;
   gap: 20px;
   grid-template-areas:
