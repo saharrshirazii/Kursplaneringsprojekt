@@ -66,11 +66,35 @@ a {
 
 /* ----------- LÄRANDEMÅL ----------- */
 
-.title-learning {
-  text-align: center;
-  margin-bottom: 20px;
+/*Knappar*/
+.learning-button {
+  background-color: var(--color-purple-light);
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px #cccccc70;
 }
 
+.learning-button.active {
+  background-color: var(--color-purple-mid);
+}
+
+#learning-objectives div /*Centrera knapparna*/ {
+  display: flex;
+  justify-content: center;
+}
+
+/*Rubrik*/
+.title-learning {
+  text-align: center;
+}
+
+.title2-learning {
+  display: none;
+}
+
+/*Innehåll*/
 .box-learning {
   display: grid;
   grid-auto-flow: column;
@@ -81,9 +105,8 @@ a {
   justify-content: center;
   background-color: var(--color-grey-dark);
   border-radius: 25px;
-  width: 80vw;
-  min-height: 100px;
   max-width: 500px;
+  min-height: 100px;
   margin-bottom: 20px;
 }
 
@@ -107,11 +130,16 @@ a {
   margin: 0;
 }
 
-#learning-objectives {
-  display: flex; /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar*/
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+/*JS-komplettering*/
+#skills,
+#knowledge {
+  display: none;
+}
+
+#skills.active,
+#knowledge.active {
+  display: block;
+  margin-top: 30px;
 }
 
 /* ----------- KUNSKAPSKONTROLL ----------- */
@@ -123,6 +151,8 @@ a {
 /* ----------- RESPONSIVITET ----------- */
 
 @media (min-width: 768px) {
+
+  /*NAV-CARDS*/
   #nav-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -139,13 +169,62 @@ a {
   .nav-card {
     margin: 20px auto;
   }
+
+  /*LÄRANDEMÅL*/
+  /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar*/
+  #learning-objectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  justify-self: center;
+  justify-content: center;
+  gap: 20px;
+  grid-template-areas:
+  "title title"
+  "skills knowledge"
+  };
+
+  /*Gömmer knapparna på större skärmar*/
+  #learning-objectives div {
+    display: none;
+  }
+
+  .learning-button,
+  .learning-button.active {
+    display: none;
+  }
+
+  .title-learning {
+    grid-area: title;
+  }
+
+  #knowledge,
+  #knowledge.active {
+    display: block;
+    grid-area: knowledge;
+    margin-top: 0;
+  }
+
+  #skills,
+  #skills.active {
+    display: block;
+    grid-area: skills;
+    margin-top: 0;
+  }
+
+  .title2-learning {
+    display: block;
+    justify-self: center;
+  }
 }
 
 @media (min-width: 1024px) {
+
+  /*NAV-CARDS*/
   #nav-cards {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1300px;
     margin: auto;
     justify-content: center;
-  }
+  }  
 }
