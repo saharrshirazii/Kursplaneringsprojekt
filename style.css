@@ -6,3 +6,296 @@
   --color-purple-light: #E7CFFF;
   --color-black-dark: #2B2B2B;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, Roboto, Arial, sans-serif;
+  color: var(--color-black-dark);
+  background: var(--color-grey-light);
+  line-height: 1.6;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--color-black-dark);
+  color: var(--color-grey-light);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  width: 100%;
+  background: var(--color-grey-light);
+  border-bottom: 2px solid var(--color-black-dark);
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+}
+
+.logo {
+  width: 64px;
+  height: auto;
+  display: block;
+}
+
+/* Hamburgermeny */
+.menu-toggle {
+  inline-size: 44px;
+  block-size: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Ikonlinjer för hamburgermeny */
+.burger {
+  position: relative;
+  inline-size: 26px;
+  block-size: 18px;
+}
+
+.burger .line, .burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  block-size: 3px;
+  background: var(--color-black-dark);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+.burger .line {
+  top: 50%; transform: translateY(-50%);
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+/* Öppnat läge = kryss */
+.menu-toggle.is-open .burger .line {
+  opacity: 0;
+}
+
+.menu-toggle.is-open .burger::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-toggle.is-open .burger::after {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  bottom: auto;
+}
+
+/* Menylänkar */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--color-grey-light);
+  border-top: 2px solid var(--color-black-dark);
+  border-left: 1px solid var(--color-black-dark);
+  border-right: 1px solid var(--color-black-dark);
+  border-bottom: 1px solid var(--color-black-dark);
+  border-radius: 0 0 10px 10px;
+  z-index: 2000;
+}
+
+.nav-links[hidden] {
+  display: none !important;
+}
+
+.nav-links a {
+  display: block;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: var(--color-black-dark);
+  font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a:focus {
+  color: var(--color-purple-dark);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    display: flex !important;
+    gap: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+}
+
+/* Boxstyle för mindre skärmar */
+@media (max-width: 767px) { 
+  .nav-links li { 
+    border: 1px solid var(--color-black-dark);border-radius: 6px;
+    margin: 0.5rem 1rem;
+    background: var(--color-grey-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-links li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 1rem;
+    text-decoration: none;
+    color: var(--color-black-dark);
+    font-weight: 500;
+  }
+}
+
+/* ---------- STÖD.HTML ---------- */
+.support-hero {
+  background: var(--color-grey-light);
+  padding: 1.5rem 1.5rem 0;
+}
+
+.support-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  line-height: 1.4;
+}
+
+/* Support-hero titel fade in */
+.support-hero h1 {
+  animation: titleFade 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes titleFade {
+  from {
+    opacity: 0;
+    letter-spacing: 2px;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0);
+  }
+}
+
+.support-section {
+  padding: 1rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.support-card-1, .support-card-2 {
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.support-card-1 {
+  background: var(--color-purple-light);
+}
+
+.support-card-2 {
+  background: var(--color-purple-dark);
+}
+
+/* Border highlight */
+.support-card-1, .support-card-2 {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.support-card-1:hover {
+  border-color: var(--color-purple-mid);
+}
+
+.support-card-2:hover {
+  border-color: var(--color-purple-light);
+}
+
+/* Support-card punktlista */
+.support-card-1 ul li, .support-card-2 ul li {
+  padding: 0.3rem;
+}
+
+/* Fade-in animation för kort */
+.support-card-1, .support-card-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+.support-card-2 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; transform: translateY(20px);
+  }
+  to {
+    opacity: 1; transform: translateY(0);
+  }
+}
+
+/* Hovereffekt för kort */
+.support-card-1:hover, .support-card-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Desktop */
+@media (min-width:768px) {
+  .support-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .support-card-1, .support-card-2 {
+    width: 45%;
+  }
+}

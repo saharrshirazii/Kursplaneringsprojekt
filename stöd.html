@@ -9,8 +9,65 @@
 <body>
 
   <!--HEADER-->
+  <!-- Tillgänglighet: skippa direkt till huvudinnehåll -->
+  <a class="skip-link" href="#main">Hoppa till huvudinnehåll</a>
+
+  <header class="site-header" role="banner">
+  <!-- Navigation bar -->
+      
+      <!-- Logga -->
+      <nav class="navbar" aria-label="Huvudmeny">
+          <a class="logo-link" href="index.html">
+              <img src="icons/logo_svart.png" alt="Chas Academy logotyp" class="logo">
+          </a>
+
+          <!-- Hamburgermeny / close-knapp -->
+          <button class="menu-toggle" id="menu-toggle" aria-label="Öppna meny" aria-controls="primary-nav" aria-expanded="false" aria-haspopup="true">
+              <span class="burger" aria-hidden="true">
+                  <span class="line"></span>
+              </span>
+          </button>
+
+          <!-- Länkar i meny -->
+          <ul class="nav-links" id="primary-nav">
+              <li><a href="index.html">Hem</a></li>
+              <li><a href="lärandemål.html">Lärandemål</a></li>
+              <li><a href="kunskapskontroll.html">Kunskapskontroll</a></li>
+              <li><a href="bedömning.html">Bedömning</a></li>
+              <li><a href="stöd.html" aria-current="page">Stöd</a></li>
+          </ul> 
+      </nav>
+  </header> 
 
   <!--MAIN LÄGG IN KODEN HÄR-->
+  <main id="main" tabindex="-1">
+    <!-- Titel -->
+    <section class="support-hero">
+      <h1>Rätt till särskilt pedagogiskt stöd och komplettering</h1>
+    </section>
+
+    <!-- Innehåll -->
+    <section class="support-section">
+      <article class="support-card-1">
+        <h2>Vid behov av särskilt pedagogiskt stöd kan följande anpassningar göras vid uppvisande av intyg:</h2>
+        <ul>
+          <li>Förlängd tid vid examinationstillfället.</li>
+          <li>Alternativa examinationsformer, exempelvis skriftliga istället för muntliga moment.</li>
+          <li>Utökat stöd för att underlätta inlärningen.</li>
+        </ul>
+      </article>
+
+      <article class="support-card-2">
+        <h2>Komplettering och omprov:</h2>
+        <ul>
+          <li>Studerande har rätt till en (1) omexamination inom sex (6) månader från det ordinarie examinationstillfället. Tid och form fastställs av utbildningsanordnaren och utbildaren och meddelas till studerande, som förväntas följa dessa beslut.</li>
+          <li>Om omprovet inte genomförs eller inte godkänns, kan inget betyg sättas i kursen. Studerande kan dock fortsätta med efterföljande kurser, förutsatt att den missade kursen inte utgör ett förkunskapskrav för dessa.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 
   <!--FOOTER-->    
 </body>
