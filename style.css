@@ -38,7 +38,6 @@ nav.scroll {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-grey-dark);
   padding: 10px 0;
   z-index: 1000;
 }
@@ -57,13 +56,14 @@ nav a{
   font-weight: bold;
   background-color: var(--color-grey-light);
   padding: 10px 20px;
+  border: 2px solid var(--color-purple-dark);
   border-radius: 10px;
   display: inline-block;
   
 }
 nav a:hover {
   background-color: var(--color-purple-dark);
-  color:var(--color-black-dark)
+  color:var(--color-black-dark);
 }
 /* Smooth scroll end */
 
