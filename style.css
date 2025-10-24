@@ -26,6 +26,28 @@ main {
 
 
 /* ----------- LÄRANDEMÅL ----------- */
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 20px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+nav a{
+  text-decoration: none;
+  color:var(--color-black-dark);
+  font-weight: bold;
+  
+}
+/* Smooth scroll */
 
 .title-learning {
   text-align: center;
@@ -73,6 +95,7 @@ main {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  padding-bottom: 100px;
 }
 
 /* FOOTER START */
