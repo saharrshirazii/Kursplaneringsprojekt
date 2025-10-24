@@ -24,107 +24,6 @@ main {
   flex: 1;
 }
 
-/* FOOTER START */
-footer {
-  background-color: var(--color-grey-dark);
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-}
-.footer-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 10px;
-  padding-bottom: 0 10px;
-  cursor: pointer;
-}
-.footer-images img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border-color: var(--color-purple-dark);
-  border-width: 2px;
-  border-style: solid;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  object-fit: cover;
-  display: block;
-}
-.footer-images img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-/* Knapparna i footern */
-.footer-btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  padding: 20px 0;
-  background-color: #f4f4f4;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-/* De tre knapparna */
-.footer-btn-left,
-.footer-btn-home,
-.footer-btn-right {
-  position: relative;
-  text-align: center;
-}
-/* Storlek på bilderna */
-.footer-left-btn,
-.footer-home-btn,
-.footer-right-btn {
-  width: 30px;
-  height: auto;
-  cursor: pointer;
-}
-/* label del */
-.footer-left-label,
-.footer-home-label,
-.footer-right-label {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #9a63d9;
-  color: #f4f4f4;
-  padding: 5px 10px;
-  border-radius: 4px;
-  white-space: nowrap;
-  font-size: 14px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  z-index: 10;
-}
-.footer-btn-left:hover .footer-left-label,
-.footer-btn-home:hover .footer-home-label,
-.footer-btn-right:hover .footer-right-label,
-.footer-btn-left a:hover ~ .footer-left-label,
-.footer-btn-home a:hover ~ .footer-home-label,
-.footer-btn-right a:hover ~ .footer-right-label {
-  opacity: 1;
-}
-
-@media (min-width: 768px) {
-  .footer-images img {
-    width: 64px;
-    height: 64px;
-  }
-  .footer-images {
-    gap: 1rem;
-    padding: 0 2px;
-  }
-}
-
-/* FOOTER END */
 
 /* ----------- GLOBALT ----------- */
 
@@ -237,6 +136,96 @@ a {
 
 /* ----------- PEDAGOGISKT STÖD ----------- */
 
+/* ----------- FOOTER ------------ */
+footer {
+  background-color: var(--color-grey-dark);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.footer-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+  padding-bottom: 0 10px;
+  cursor: pointer;
+}
+.footer-images img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-color: var(--color-purple-dark);
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  display: block;
+}
+.footer-images img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+/* Knapparna i footern */
+.footer-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* De tre knapparna */
+.footer-btn-left,
+.footer-btn-home,
+.footer-btn-right {
+  position: relative;
+  text-align: center;
+}
+/* Storlek på bilderna */
+.footer-left-btn,
+.footer-home-btn,
+.footer-right-btn {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+/* label del */
+.footer-left-label,
+.footer-home-label,
+.footer-right-label {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #9a63d9;
+  color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+.footer-btn-left:hover .footer-left-label,
+.footer-btn-home:hover .footer-home-label,
+.footer-btn-right:hover .footer-right-label,
+.footer-btn-left a:hover ~ .footer-left-label,
+.footer-btn-home a:hover ~ .footer-home-label,
+.footer-btn-right a:hover ~ .footer-right-label {
+  opacity: 1;
+}
+
+
 /* ----------- RESPONSIVITET ----------- */
 
 @media (min-width: 768px) {
@@ -247,15 +236,24 @@ a {
     margin: auto;
     overflow-x: hidden;
   }
-
+  
   #card-title {
     text-align: center;
     margin-bottom: 20px;
   }
-
+  
   .nav-card {
     margin: 20px auto;
   }
+  
+    .footer-images img {
+      width: 64px;
+      height: 64px;
+    }
+    .footer-images {
+      gap: 1rem;
+      padding: 0 2px;
+    }
 }
 
 @media (min-width: 1024px) {
