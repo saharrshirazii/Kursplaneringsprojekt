@@ -26,12 +26,21 @@ main {
 
 
 /* ----------- LÄRANDEMÅL ----------- */
-/* Smooth scroll */
+/* Smooth scroll start */
 html {
   scroll-behavior: smooth;
 }
 section {
-  scroll-margin-top: 20px;
+  scroll-margin-top: 80px;
+}
+nav.scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-grey-dark);
+  padding: 10px 0;
+  z-index: 1000;
 }
 nav ul {
   list-style: none;
@@ -39,15 +48,24 @@ nav ul {
   display: flex;
   gap: 20px;
   justify-content: center;
+  margin: 0;
 }
 
 nav a{
   text-decoration: none;
-  color:var(--color-black-dark);
+  color:var(--color-purple-dark);
   font-weight: bold;
+  background-color: var(--color-grey-light);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
   
 }
-/* Smooth scroll */
+nav a:hover {
+  background-color: var(--color-purple-dark);
+  color:var(--color-black-dark)
+}
+/* Smooth scroll end */
 
 .title-learning {
   text-align: center;
@@ -96,6 +114,7 @@ nav a{
   gap: 40px;
   flex-wrap: wrap;
   padding-bottom: 100px;
+  padding-top: 60px;
 }
 
 /* FOOTER START */
