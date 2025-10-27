@@ -1,18 +1,114 @@
+/* ----------- FÄRGPALETT ----------- */
+
 :root {
-  --color-grey-dark: #E6E6E6;
-  --color-grey-light: #F4F4F4;
-  --color-purple-dark: #C49BFA;
-  --color-purple-mid: #DAB5FF;
-  --color-purple-light: #E7CFFF;
-  --color-black-dark: #2B2B2B;
+  --color-grey-dark: #e6e6e6;
+  --color-grey-light: #f4f4f4;
+  --color-purple-dark: #c49bfa;
+  --color-purple-mid: #dab5ff;
+  --color-purple-light: #e7cfff;
+  --color-black-dark: #2b2b2b;
 }
 
-/*Globalt*/
+ Principer-för-bedömning-och-betygskriterier-/karam
+
+.trafikljus {
+  background-color: #222;
+  padding: 25px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.ljus {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 -5px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.ljus:hover {
+  transform: scale(1.05);
+}
+
+.röd { background-color: #e74c3c; box-shadow: 0 0 20px #e74c3c; }
+.gul { background-color: #f1c40f; box-shadow: 0 0 20px #f1c40f; }
+.grön { background-color: #2ecc71; box-shadow: 0 0 20px #2ecc71; }
+
+.ljus-knapp {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.ljus-knapp:hover {
+  transform: scale(1.2);
+  background-color: #fff;
+}
+
+.pop-out {
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%) translateX(20px);
+  min-width: 150px;
+  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: white; /* texten blir vit för kontrast */
+  font-weight: bold;
+}
+
+.pop-out.show {
+  display: block;
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+.röd .pop-out { background-color: #e74c3c; border-color: #c0392b; }
+.gul .pop-out { background-color: #f1c40f; border-color: #d4ac0d; color: #333; }
+.grön .pop-out { background-color: #2ecc71; border-color: #27ae60; }
+
+/* ----------- GLOBALT ----------- */
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-grey-light);
   color: var(--color-black-dark);
+  min-height: 100vh;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+  margin: 6px 16px 30px 16px;
 }
 
 a {
@@ -20,14 +116,160 @@ a {
   color: var(--color-black-dark);
 }
 
+/* ----------- SMOOTH SCROLL ----------- */
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px;
+}
+nav.scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+}
+
+nav a{
+  text-decoration: none;
+  color:var(--color-purple-dark);
+  font-weight: bold;
+  background-color: var(--color-grey-light);
+  padding: 10px 20px;
+  border: 2px solid var(--color-purple-dark);
+  border-radius: 10px;
+  display: inline-block;
+  
+}
+nav a:hover {
+  background-color: var(--color-purple-dark);
+  color:var(--color-black-dark);
+}
+
+/* ----------- FOOTER ------------ */
+footer {
+  background-color: var(--color-grey-dark);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+  padding-bottom: 0 10px;
+  cursor: pointer;
+}
+
+.footer-images img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-color: var(--color-purple-dark);
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  display: block;
+}
+
+.footer-images img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Knapparna i footern */
+.footer-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* De tre knapparna */
+.footer-btn-left,
+.footer-btn-home,
+.footer-btn-right {
+  position: relative;
+  text-align: center;
+}
+
+/* Storlek på bilderna */
+.footer-left-btn,
+.footer-home-btn,
+.footer-right-btn {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* label del */
+.footer-left-label,
+.footer-home-label,
+.footer-right-label {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #9a63d9;
+  color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.footer-btn-left:hover .footer-left-label,
+.footer-btn-home:hover .footer-home-label,
+.footer-btn-right:hover .footer-right-label,
+.footer-btn-left a:hover ~ .footer-left-label,
+.footer-btn-home a:hover ~ .footer-home-label,
+.footer-btn-right a:hover ~ .footer-right-label {
+  opacity: 1;
+}
+
+/* ----------- STARTSIDA ----------- */
 
 /*Navigation cards*/
-
 #nav-cards {
   display: flex;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: var(--color-grey-dark) var(--color-grey-light);
+  gap: 20px;
+  padding: 0 8px 0 16px;
+  margin-bottom: 30px;
+}
+
+#card-title {
+  margin-left: 10px;
 }
 
 #nav-cards h2 {
@@ -35,7 +277,7 @@ a {
 }
 
 .nav-card {
-  margin-right: 20px;
+  scroll-snap-align: start;
   width: 250px;
 }
 
@@ -61,15 +303,112 @@ a {
   text-decoration: underline;
 }
 
-/*Responsivitet*/
+/* ----------- LÄRANDEMÅL ----------- */
+
+/*Knappar*/
+.learning-button {
+  background-color: var(--color-purple-light);
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px #cccccc70;
+}
+
+.learning-button.active {
+  background-color: var(--color-purple-mid);
+}
+
+#learning-objectives div /*Centrera knapparna*/ {
+  display: flex;
+  justify-content: center;
+}
+
+/*Rubrik*/
+.title-learning {
+  text-align: center;
+}
+
+.title2-learning {
+  display: none;
+}
+
+/*Innehåll*/
+.box-learning {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 0 20px;
+  gap: 20px;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  background-color: var(--color-grey-dark);
+  border-radius: 25px;
+  max-width: 500px;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.box-description {
+  font-size: 16px;
+}
+
+.number-circle {
+  background-color: var(--color-purple-dark);
+  height: 60px;
+  aspect-ratio: 1 / 1;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  font-size: 24px;
+  color: var(--color-grey-light);
+  margin: 0;
+}
+
+/*JS-komplettering*/
+#skills,
+#knowledge {
+  display: none;
+}
+
+#skills.active,
+#knowledge.active {
+  display: block;
+  margin-top: 30px;
+}
+
+/* ----------- KUNSKAPSKONTROLL ----------- */
+
+/* ----------- BEDÖMNING ----------- */
+
+/* ----------- PEDAGOGISKT STÖD ----------- */
+
+/* ----------- RESPONSIVITET ----------- */
 
 @media (min-width: 768px) {
+  /*FOOTER*/
+  .footer-images img {
+    width: 64px;
+    height: 64px;
+  }
+  .footer-images {
+    gap: 1rem;
+    padding: 0 2px;
+  }
+
+  /*NAV-CARDS*/
   #nav-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 600px;
     margin: auto;
     overflow-x: hidden;
+    padding: 0;
+    gap: 0;
   }
 
   #card-title {
@@ -80,13 +419,63 @@ a {
   .nav-card {
     margin: 20px auto;
   }
+
+  /*LÄRANDEMÅL*/
+  /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar*/
+  #learning-objectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  align-self: center;
+  justify-content: center;
+  gap: 20px;
+  grid-template-areas:
+  "title title"
+  "skills knowledge"
+  };
+
+  /*Gömmer knapparna på större skärmar*/
+  #learning-objectives div {
+    display: none;
+  }
+
+  .learning-button,
+  .learning-button.active {
+    display: none;
+  }
+
+  .title-learning {
+    grid-area: title;
+  }
+
+  #knowledge,
+  #knowledge.active {
+    display: block;
+    grid-area: knowledge;
+    margin-top: 0;
+  }
+
+  #skills,
+  #skills.active {
+    display: block;
+    grid-area: skills;
+    margin-top: 0;
+  }
+
+  .title2-learning {
+    display: block;
+    justify-self: center;
+  }
 }
 
 @media (min-width: 1024px) {
+
+  /*NAV-CARDS*/
   #nav-cards {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1300px;
     margin: auto;
     justify-content: center;
-  }
+  }  
 }
+dev
