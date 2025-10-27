@@ -1,71 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icons/chas.svg" type="image/x-icon" />
     <title>Kursplaneringsprojekt</title>
 </head>
 <body>
-<header>
-    <!-- Navigation bar -->
-</header>  
-<main>
-    <!-- Hero -->
-     <div class="hero-image">
-  <div class="hero-text">
-    <h1>FRONTENDUTVECKLING</h1>
-    <p>Denna kurs fokuserar på frontendutveckling med JavaScript, inklusive skapandet av dynamiska och interaktiva
-webbapplikationer. Studerande lär sig att hantera DOM, integrera API:er och implementera
-tillgänglighetsanpassningar enligt WCAG. Kursen täcker också grundläggande UX/UI-principer,
-prestandaoptimering och säkerhet för att skapa användarvänliga och effektiva gränssnitt. Efter en inledande
-inlärningsfas genomför studerande projekt där de praktiserar sina färdigheter i en arbetsliknande miljö.</p>
-    <button>submit</button>
+    <header>
+        <nav>
+        <!-- Add navigation content here if needed -->
+        </nav>
+    </header>  
+    <main>
+        <!-- Hero -->
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>FRONTENDUTVECKLING</h1>
+                <p>Denna kurs fokuserar på frontendutveckling med JavaScript, inklusive skapandet av dynamiska och interaktiva
+                webbapplikationer. Studerande lär sig att hantera DOM, integrera API:er och implementera
+                \tillgänglighetsanpassningar enligt WCAG. Kursen täcker också grundläggande UX/UI-principer,
+                prestandaoptimering och säkerhet för att skapa användarvänliga och effektiva gränssnitt. Efter en inledande
+                inlärningsfas genomför studerande projekt där de praktiserar sina färdigheter i en arbetsliknande miljö.</p>
+                <button>submit</button>
+            </div>
+        </div>
 
-  </div>
-</div>
+        
+        <!--Cards-->
+        <section>
+            <h2 id="card-title">Kursplanens innehåll</h2>
 
+            <div id="nav-cards">
+            <a href="lärandemål.html" class="nav-card">
+                <article>
+                    <img src="images/lärandemål-img.png" alt="Animerad person som håller i en tavla med en checklista." class="neon-img">
+                    <h3>Lärandemål</h3>
+                    <p>Den studerande ha lärt sig ett antal kunskaper och färdigheter.</p>
+                    <p class="read-more">Läs mer &rarr;</p>
+                </article>
+            </a>
 
- <!--Cards-->
-<!--Testimonial-->
-<div class="testimonial">
-<div class="testimonial-hrader">
-        <h2>Vad säger våra alumner?</h2><br/>
-</div>    
+            <a href="kunskapskontroll.html" class="nav-card">
+                <article>
+                    <img src="images/kunskapskontroll-img.png" alt="Animerade personer som sitter runt ett runt bord och har en workshop." class="neon-img">
+                    <h3>Kunskapskontroll</h3>
+                    <p>Kunskapskontrollen består av både summativ och formativ bedömning.</p>
+                    <p class="read-more">Läs mer &rarr;</p>
+                </article>
+            </a>
 
-    <div class="testimonial-container">
-        <div class="testimonial-box">
-    <img src="images/testimonial-1.webp"/>
-    <h3>INSPIRERANDE TID</h3>
-    <p>Tiden på Chas Academy var otroligt inspirerande! Att omges av likasinnade med samma mål gav mig extra motivation till att alltid göra mitt bästa. Engagerad skolpersonal, kunniga lärare och en stor variation av stimulerande och roliga studiemoment gjorde upplevsen toppen! Idag arbetar jag som UX designer på Afa försäkring och trivs jättebra med mitt yrkesval och arbetsplats."<br/><br/>
-    <strong>MAHER HEZAM</strong>
-</p>
-</div>
-<div class="testimonial-box">
-    <img src="images/testimonial-2.webp"/>
-    <h3>LIA SOM LEDER TILL JOBB</h3>
-    <p>"Jag har alltid varit intresserad av IT men hade ingen erfarenhet innan jag började studera på Chas. Under utbildningen fick vi lära oss allt mellan att strukturera arbete och läsa kod, vilket gav bra kunskap för framtida jobb. Idag jobbar jag som DevOps Engineer hos Solidify där jag även genomförde både min LIA och mitt examensarbete."<br/><br/>
-    <strong> MELINA ASPLUND</strong>
-</p>
-</div>
-<div class="testimonial-box">
-    <img src="images/testimonial-3.webp"/>
-    <h3>FRÅN STUDERANDE TILL UTBILDARE</h3>
-    <p>"Jag valde den här utbildningen för att få en mer flexibel vardag, jag har jobbat inom restaurang hela mitt liv och ville göra något som är lika kreativt som att laga mat. Jag fastnade för programmering och ville kunna allt så valde därmed Fullstack. Idag är jag tillbaka på Chas men som utbildare denna gång, vilket är så kul! Jag får möjlighet att sprida vidare kunskaperna som jag lärde mig precis här vilket känns riktigt bra."<br/><br/>
-    <strong>LUDVIG FLYCKT</strong>
-    </p>
-</div>
-</div>
+            <a href="bedömning.html" class="nav-card">
+                <article>
+                    <img src="images/bedömning-img.png" alt="Ett animerat papper med oläsbara bedömningar." class="neon-img">
+                    <h3>Bedömning</h3>
+                    <p>För att nå de olika bedömningarna krävs att ett antal mål nås.</p>
+                    <p class="read-more">Läs mer &rarr;</p>
+                </article>
+            </a>
 
-    </div>
+            <a href="stöd.html" class="nav-card">
+                <article>
+                    <img src="images/stöd-img.png" alt="An animated student and tutor studying." class="neon-img">
+                    <h3>Pedagogiskt stöd</h3>
+                    <p>Studerande har rätt till pedagogiskt stöd och omprövningar vid behov.</p>
+                    <p class="read-more">Läs mer &rarr;</p>
+                </article>
+            </a>
+            </div>
 
+        </section>
+        <section>
+        <!--Testimonial-->
+            <div class="testimonial">
+                <div class="testimonial-hrader">
+                    <h2>Vad säger våra alumner?</h2><br/>
+                </div>    
 
-</main>  
-<footer>
-    <!-- Footer -->
-    <img class="sahar-class" src="images/sahar.jpg" alt="Sahar">
-</footer>
-<script src="sahar.js"></script>
-</body>
+                <div class="testimonial-container">
+                    <div class="testimonial-box">
+                    <img src="images/testimonial-1.webp"/>
+                    <h3>INSPIRERANDE TID</h3>
+                    <p>Tiden på Chas Academy var otroligt inspirerande! Att omges av likasinnade med samma mål gav mig extra motivation till att alltid göra mitt bästa. Engagerad skolpersonal, kunniga lärare och en stor variation av stimulerande och roliga studiemoment gjorde upplevsen toppen! Idag arbetar jag som UX designer på Afa försäkring och trivs jättebra med mitt yrkesval och arbetsplats."<br/><br/>
+                    <strong>MAHER HEZAM</strong>
+                    </p>
+                </div>
+                <div class="testimonial-box">
+                    <img src="images/testimonial-2.webp"/>
+                    <h3>LIA SOM LEDER TILL JOBB</h3>
+                    <p>"Jag har alltid varit intresserad av IT men hade ingen erfarenhet innan jag började studera på Chas. Under utbildningen fick vi lära oss allt mellan att strukturera arbete och läsa kod, vilket gav bra kunskap för framtida jobb. Idag jobbar jag som DevOps Engineer hos Solidify där jag även genomförde både min LIA och mitt examensarbete."<br/><br/>
+                    <strong> MELINA ASPLUND</strong>
+                    </p>
+                </div>
+                <div class="testimonial-box">
+                    <img src="images/testimonial-3.webp"/>
+                    <h3>FRÅN STUDERANDE TILL UTBILDARE</h3>
+                    <p>"Jag valde den här utbildningen för att få en mer flexibel vardag, jag har jobbat inom restaurang hela mitt liv och ville göra något som är lika kreativt som att laga mat. Jag fastnade för programmering och ville kunna allt så valde därmed Fullstack. Idag är jag tillbaka på Chas men som utbildare denna gång, vilket är så kul! Jag får möjlighet att sprida vidare kunskaperna som jag lärde mig precis här vilket känns riktigt bra."<br/><br/>
+                    <strong>LUDVIG FLYCKT</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<!--Footer första sidan -->
+    <footer>
+        <!-- Section för images och github länkar -->
+        <section class="img-container">
+            <div class="footer-images">
+            <a href="https://www.github.com/ahmringholm" target="_blank">
+                <img src="images/ahm.jpg" alt="Ahm profilering"/>
+            </a>
+            <a href="https://www.github.com/Gagipose/" target="_blank">
+                <img src="images/david.jpg" alt="David profilering"/>
+            </a>
+            <a href="http://www.github.com/johannaasandstrom" target="_blank">
+                <img src="images/johanna.jpg" alt="Johanna profilering"/>
+            </a>
+            <a href="http://www.github.com/karamshaafout07-arch/" target="_blank">
+                <img src="images/karam.jpg" alt="Karam profilering"/>
+            </a>
+            <a href="https://www.github.com/NM-Codes/" target="_blank">
+                <img src="images/najah.jpg" alt="Najah profilering"/>
+            </a>
+            <a href="https://www.github.com/saharrshirazii" target="_blank">
+                <img src="images/sahar.jpg" alt="Sahar profilering"/>
+            </a>
+            <a id="veronica" href="http://www.github.com/vczarnotta" target="_blank">
+                <img src="images/veronica.jpg" alt="Veronica profilering"/>
+            </a>
+            </div>
+        </section>
+
+        <!-- Beskrivning av kursplanen och knapp -->
+        <h4> Denna kursplan syftar till att utveckla professionell kompetens inom området.</h4>
+        
+        <h5><em>- Lärande för livet, kunskap i praktiken</em></h5>
+        <p class="footer-text">&copy; 2025 Kunskapskrav - Team Göteborg</p>
+    </footer>
+    <script src="sahar.js"></script>
+  </body>
 </html>
