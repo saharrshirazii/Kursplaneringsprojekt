@@ -37,8 +37,48 @@ a {
   color: var(--color-black-dark);
 }
 
-/* ----------- FOOTER ----------- */
+/* ----------- SMOOTH SCROLL ----------- */
 
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px;
+}
+nav.scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+}
+
+nav a{
+  text-decoration: none;
+  color:var(--color-purple-dark);
+  font-weight: bold;
+  background-color: var(--color-grey-light);
+  padding: 10px 20px;
+  border: 2px solid var(--color-purple-dark);
+  border-radius: 10px;
+  display: inline-block;
+  
+}
+nav a:hover {
+  background-color: var(--color-purple-dark);
+  color:var(--color-black-dark);
+}
+
+/* ----------- FOOTER ------------ */
 footer {
   background-color: var(--color-grey-dark);
   padding: 20px;
@@ -133,17 +173,6 @@ footer {
 .footer-btn-home a:hover ~ .footer-home-label,
 .footer-btn-right a:hover ~ .footer-right-label {
   opacity: 1;
-}
-
-@media (min-width: 768px) {
-  .footer-images img {
-    width: 64px;
-    height: 64px;
-  }
-  .footer-images {
-    gap: 1rem;
-    padding: 0 2px;
-  }
 }
 
 /* ----------- STARTSIDA ----------- */
@@ -282,6 +311,15 @@ footer {
 /* ----------- RESPONSIVITET ----------- */
 
 @media (min-width: 768px) {
+  /*FOOTER*/
+  .footer-images img {
+    width: 64px;
+    height: 64px;
+  }
+  .footer-images {
+    gap: 1rem;
+    padding: 0 2px;
+  }
 
   /*NAV-CARDS*/
   #nav-cards {
