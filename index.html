@@ -15,11 +15,35 @@
 </head>
 <body>
 <header>
+  <a class=“skip-link” href=“#main”>Hoppa till huvudinnehåll</a>
+<header class=“site-header” role=“banner”>
+<!-- Navigation bar -->
+    <!-- Logga -->
+    <nav class=“navbar” aria-label=“Huvudmeny”>
+        <a class=“logo-link” href=“index.html”>
+            <img src=“icons/logo_svart.png” alt=“Chas Academy logotyp” class=“logo”>
+        </a>
     <!-- Navigation bar -->
      <div class="icon-moon">
   <div class="moon-icon">
     <img id="icon" src="moon.svg" alt="Toggle Theme">
   </div>
+        <!-- Hamburgermeny / close-knapp -->
+        <button class=“menu-toggle” id=“menu-toggle” aria-label=“Öppna meny” aria-controls=“primary-nav” aria-expanded=“false” aria-haspopup=“true”>
+            <span class=“burger” aria-hidden=“true”>
+                <span class=“line”></span>
+            </span>
+        </button>
+        <!-- Länkar i meny -->
+        <ul class=“nav-links” id=“primary-nav”>
+            <li><a href=“index.html” aria-current=“page”>Hem</a></li>
+            <li><a href=“lärandemål.html”>Lärandemål</a></li>
+            <li><a href=“kunskapskontroll.html”>Kunskapskontroll</a></li>
+            <li><a href=“bedömning.html”>Bedömning</a></li>
+            <li><a href=“stöd.html”>Stöd</a></li>
+        </ul>
+    </nav>
+</header>
 </div>
 
 </header>  
@@ -104,7 +128,7 @@
             <img src="images/najah.jpg" alt="Najah" />
           </a>
           <a href="https://www.github.com/saharrshirazii" target="_blank">
-            <img src="image6.jpg" alt="Sahar" />
+            <img src="images/sahar.jpeg" alt="Sahar" />
           </a>
 
           <a
