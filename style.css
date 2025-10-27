@@ -415,7 +415,7 @@ footer {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-Dark-mod-/karam
+
   scrollbar-color: var(--color-black-dark) var(--color-grey-light);
 
   scrollbar-color: var(--color-grey-dark) var(--color-grey-light);
@@ -426,7 +426,7 @@ Dark-mod-/karam
 
 #card-title {
   margin-left: 10px;
- dev
+ 
 }
 
 #nav-cards h2 {

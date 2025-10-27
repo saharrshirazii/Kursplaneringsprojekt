@@ -1,4 +1,4 @@
- Dark-mod-/karam
+
 /* Dark Mode  */
 const toggleIcon = document.getElementById('icon');
 const body = document.body;
@@ -19,9 +19,9 @@ toggleIcon.addEventListener('click', () => {
     localStorage.setItem('theme', 'light');
   }
 });
-/* Dark Mode */
 
-Principer-för-bedömning-och-betygskriterier-/karam
+
+
 function togglePopOut(button, text) {
   const popOut = button.nextElementSibling;
   const ljus = button.parentElement; // cirkeln som knappen tillhör
