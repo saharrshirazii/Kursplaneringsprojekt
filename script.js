@@ -72,5 +72,4 @@ knowledgeBtn.addEventListener("click", () => {
     skillsSection.classList.remove("active");
     skillsBtn.classList.remove("active");
 })
- dev
- dev
+ 
