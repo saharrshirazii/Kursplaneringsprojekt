@@ -18,6 +18,54 @@ Nedan design är skapad i Figma för att visualisera hur hemsidan kan komma att 
 <img width="356" height="702" alt="image" src="https://github.com/user-attachments/assets/f959a107-b471-4b8d-a7fa-7b35277239a3" />
 </p>
 
+## Vald funktion
+
+###### Funktion
+
+Smooth Scroll
+
+Funktionen är implementerad med enbart HTML OCH CSS.
+
+###### Implementering
+
+Vi implementerade smidig scrolling kombinerat med en fast navigationsfält och aktiv knappindikering för att tydligt visa vilken sektion användaren befinner sig i på webbläsaren. När användaren klickar på en navigeringsknapp så scrollar sidan smidigt till motsvarande sektion.
+
+Enkel navigeringsfält med classen scroll i HTML filen med sektionernas header inramat i en länk tag. 
+###### HTML
+```
+<nav class="scroll">
+    <ul>
+      <li><a href="#skills">Färdigheter</a></li>
+      <li><a href="#knowledge">Kunskaper</a></li>
+    </ul>
+   </nav>
+   
+   
+```
+###### CSS
+```css
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px;
+}
+```
+
+###### Täckning bland browsers
+
+Funktionen använder standard CSS-egenskaper som är väl stödda i moderna webbläsare. Allt från smooth scrolling ( scroll-behavior: smooth), Fast navigationsfält (position: fixed) till övriga CSS egenskaper och variabler så som border och flex har fullt stöd i alla moderna webbläsare.
+
+###### Design och användarupplevelse
+
+Denna implementation förbättrar designen och användarupplevelsen på följande sätt:
+
+- **Smidig navigering**: Smooth scrolling ger en mjuk och behaglig övergång mellan sektioner, vilket gör navigeringen mer intuitiv och mindre abrupt än standardscrollning.
+- **Konsekvent åtkomst**: Det fasta navigationsfältet är alltid synligt högst upp, vilket gör det enkelt att växla mellan de olika sektionerna utan att behöva scrolla tillbaka till toppen.
+- **Estetisk förbättring**: Knapparnas design (lila ram, rundade hörn, hover-effekt) matchar sidans färgskala (t.ex. .number-circle, .box-learning), vilket skapar en enhetlig och professionell look.
+- **Tillgänglighet**: Knapparna (<a>) är tangentbordsnavigerbara, och scroll-margin-top: 80px säkerställer att sektioner är synliga under navigationsfältet, vilket förbättrar användbarheten för alla användare, inklusive de som använder skärmläsare.
+- **Enkelhet och prestanda**: Genom att använda enbart HTML och CSS undviks JavaScript, vilket minskar laddningstider och komplexitet, särskilt viktigt för sidor med mycket innehåll.
+
 ## Deltagare
 
 Samtliga deltagare läser första året på utbildningen Fullstack JavaScript hos Chas Academy i Göteborg.
