@@ -14,17 +14,27 @@
 <body>
 
   <!--HEADER-->
-<!-- SMOOTH SCROLL -->
-    <nav class="scroll">
-    <ul>
-      <li><a href="#skills">Färdigheter</a></li>
-      <li><a href="#knowledge">Kunskaper</a></li>
-    </ul>
-   </nav>
+<header>
+  <div class="icon-moon">
+  <div class="moon-icon">
+    <img id="icon" src="moon.svg" alt="Toggle Theme">
+  </div>
+</div>
+</header>
   <!--MAIN LÄGG IN KODEN HÄR-->
   <main id="learning-objectives">
-    <section id="skills"> <!--Scroll id-->
-      <h2 class="title-learning">Färdigheter</h2>
+    <h1 class="title-learning">Lärandemål</h1>
+    <div>
+      <button class="learning-button active" id="skills-btn">Färdigheter</button>
+      <button class="learning-button" id="knowledge-btn">Kunskaper</button>
+    </div>
+
+ Dark-mod-/karam
+  <!--FOOTER-->  
+  <script src="script.js"></script>  
+
+    <section id="skills" class="active">
+      <h2 class="title2-learning">Färdigheter</h2>
 
       <article class="box-learning">
         <div class="number-circle">
@@ -97,8 +107,8 @@
       </article>
     </section>
 
-    <section id="knowledge"> <!--Scroll id-->
-      <h2 class="title-learning">Kunskaper</h2>
+    <section id="knowledge">
+      <h2 class="title2-learning">Kunskaper</h2>
 
       <article class="box-learning">
         <div class="number-circle">
@@ -187,5 +197,8 @@
 
     </section>
   </footer>
+  
+  <script src="script.js"></script>
+dev
 </body>
 </html>
