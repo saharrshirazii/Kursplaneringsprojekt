@@ -308,14 +308,8 @@ footer {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-Dark-mod-/karam
-  scrollbar-color: var(--color-black-dark) var(--color-grey-light);
-
-  scrollbar-color: var(--color-grey-dark) var(--color-grey-light);
-  gap: 20px;
-  padding: 0 8px 0 16px;
-  margin-bottom: 30px;
 }
+
 
 #card-title {
   margin-left: 10px;
@@ -528,4 +522,4 @@ Dark-mod-/karam
     justify-content: center;
   }  
 }
-dev
+
