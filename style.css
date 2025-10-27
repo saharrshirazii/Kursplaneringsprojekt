@@ -206,7 +206,7 @@ nav a:hover {
 }
 
 #learning-objectives {
-  display: flex; /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar*/
+  display: flex; /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar (smooth scroll)*/
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
@@ -255,7 +255,7 @@ nav a:hover {
 }
 
 #learning-objectives {
-  display: flex; /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar*/
+  display: flex; /*Lägger färdigheter och kunskaper bredvid varandra på större skärmar (smooth scroll)*/
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
