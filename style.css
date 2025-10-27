@@ -9,12 +9,12 @@
   --color-black-dark: #2b2b2b;
 }
 
- Principer-för-bedömning-och-betygskriterier-/karam
+
 
 .trafikljus {
   background-color: #222;
   padding: 25px;
-  border-radius: 30px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,7 +116,7 @@ a {
   color: var(--color-black-dark);
 }
 
-Dark-mod-/karam
+
 /*darkmode styles*/
 
 body.dark {
@@ -162,7 +162,7 @@ body.dark a {
 
 
 /* ----------- SMOOTH SCROLL ----------- */
- dev
+
 
 html {
   scroll-behavior: smooth;
@@ -312,7 +312,7 @@ nav a:hover {
 
 /* ----------- FOOTER ------------ */
 footer {
-  background-color: var(--color-grey-dark);
+
   padding: 20px;
   text-align: center;
   width: 100%;
