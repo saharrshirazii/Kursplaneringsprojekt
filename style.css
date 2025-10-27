@@ -94,7 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-grey-light);
+  background-color: var(--color-gray-light);
   color: var(--color-black-dark);
   min-height: 100vh;
 }
@@ -116,7 +116,53 @@ a {
   color: var(--color-black-dark);
 }
 
+Dark-mod-/karam
+/*darkmode styles*/
+
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+body.dark .nav-card {
+  background-color: #1e1e1e;
+  
+}
+body.dark .nav-card h3,
+body.dark .nav-card p,
+body.dark .nav-card a {
+  color: #fff; 
+}
+body.dark #nav-cards {
+  scrollbar-color: var(--color-grey-light) #2B2B2B;
+}
+body.dark a {
+  color: #DAB5FF
+}
+/* Placering av ikonen */
+.icon-moon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;   
+  height: 40px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Storlek på bilden */
+.moon-icon img {
+  width: 100%;   
+  height: 100%;
+  object-fit: contain; /* behåller proportionerna */
+  display: block;
+}
+
+
+
 /* ----------- SMOOTH SCROLL ----------- */
+ dev
 
 html {
   scroll-behavior: smooth;
@@ -262,6 +308,9 @@ footer {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
+Dark-mod-/karam
+  scrollbar-color: var(--color-black-dark) var(--color-grey-light);
+
   scrollbar-color: var(--color-grey-dark) var(--color-grey-light);
   gap: 20px;
   padding: 0 8px 0 16px;
@@ -270,6 +319,7 @@ footer {
 
 #card-title {
   margin-left: 10px;
+ dev
 }
 
 #nav-cards h2 {

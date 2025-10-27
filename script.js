@@ -1,3 +1,26 @@
+ Dark-mod-/karam
+/* Dark Mode  */
+const toggleIcon = document.getElementById('icon');
+const body = document.body;
+
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark');
+  toggleIcon.src = 'sun.svg';
+}
+
+toggleIcon.addEventListener('click', () => {
+  body.classList.toggle('dark');
+
+  if (body.classList.contains('dark')) {
+    toggleIcon.src = 'sun.svg';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    toggleIcon.src = 'moon.svg';
+    localStorage.setItem('theme', 'light');
+  }
+});
+/* Dark Mode */
+
 Principer-för-bedömning-och-betygskriterier-/karam
 function togglePopOut(button, text) {
   const popOut = button.nextElementSibling;
@@ -49,4 +72,5 @@ knowledgeBtn.addEventListener("click", () => {
     skillsSection.classList.remove("active");
     skillsBtn.classList.remove("active");
 })
+ dev
  dev
