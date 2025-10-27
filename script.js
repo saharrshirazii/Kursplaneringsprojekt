@@ -7,8 +7,8 @@ const knowledgeSection = document.querySelector("#knowledge")
 
 skillsBtn.addEventListener("click", () => {
     // Visa färdigheter-innehållet och gör knappen mörkare
-    skillsSection.classList.toggle("active");
-    skillsBtn.classList.toggle("active");
+    skillsSection.classList.add("active");
+    skillsBtn.classList.add("active");
 
     // Dölj kunskaper-innehållet och gör knappen ljusare om de är aktiva
     knowledgeSection.classList.remove("active");
@@ -17,8 +17,8 @@ skillsBtn.addEventListener("click", () => {
 
 knowledgeBtn.addEventListener("click", () => {
     // Visa kunskaper-innehållet och gör knappen mörkare
-    knowledgeSection.classList.toggle("active");
-    knowledgeBtn.classList.toggle("active");
+    knowledgeSection.classList.add("active");
+    knowledgeBtn.classList.add("active");
 
     // Dölj färdigheter-innehållet och gör knappen ljusare om de är aktiva
     skillsSection.classList.remove("active");
